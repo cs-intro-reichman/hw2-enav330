@@ -6,7 +6,7 @@ public class Cheers {
         
         // 1. תיקון רשימת specialChars (התאמה לדרישת המבדק)
         // הרשימה הנכונה עבור "an"
-        String specialChars = "AEFHILMNRO"; 
+        String specialChars = "AEFHILMNROSX"; 
         
         cheerWord = cheerWord.toUpperCase(); 
         

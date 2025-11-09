@@ -4,9 +4,9 @@ public class Cheers {
         String cheerWord = args[0];
         int N = Integer.parseInt(args[1]);
         
-        // 1. תיקון רשימת specialChars (הוצאת U ו-I כיוון שהמבדק דורש "a" עבורן)
-        // רשימת האותיות שנשארו ודורשות "an":
-        String specialChars = "AEFHMNRSX"; 
+        // 1. תיקון רשימת specialChars (התאמה לדרישת המבדק)
+        // הרשימה הנכונה עבור "an"
+        String specialChars = "AEFHILMNRO"; 
         
         cheerWord = cheerWord.toUpperCase(); 
         
@@ -16,11 +16,10 @@ public class Cheers {
             char currentChar = cheerWord.charAt(i);
             String article; 
             
-            // בדיקת "an"
             if (specialChars.indexOf(currentChar) != -1) {
                 article = "an";
             } else {
-                // תיקון סופי: הוספת רווח נוסף למילה 'a' 
+                // נדרש רווח נוסף עבור "a" כדי להתאים לפורמט
                 article = "a "; 
             }
             

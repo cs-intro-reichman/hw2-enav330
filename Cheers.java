@@ -3,9 +3,12 @@ public class Cheers {
         
         String cheerWord = args[0];
         int N = Integer.parseInt(args[1]);
+        
         String specialChars = "AEFHILMNORSXU"; 
-            cheerWord = cheerWord.toUpperCase(); 
+        cheerWord = cheerWord.toUpperCase(); 
+        
         for (int i = 0; i < cheerWord.length(); i++) {
+            
             char currentChar = cheerWord.charAt(i);
             String article; 
             
@@ -14,7 +17,9 @@ public class Cheers {
             } else {
                 article = "a";
             }
-            System.out.println("Give me " + article + " " + currentChar + ":");
+            
+            System.out.print("Give me " + article + " " + currentChar + ": "); 
+            
             System.out.println(currentChar + "!");
         }
         

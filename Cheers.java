@@ -4,9 +4,9 @@ public class Cheers {
         String cheerWord = args[0];
         int N = Integer.parseInt(args[1]);
         
-        // 1. תיקון רשימת specialChars (הוספת U)
-        // הרשימה המלאה של האותיות שדורשות "an"
-        String specialChars = "AEFHILMNORSXU"; 
+        // 1. תיקון רשימת specialChars (הוצאת U ו-I כיוון שהמבדק דורש "a" עבורן)
+        // רשימת האותיות שנשארו ודורשות "an":
+        String specialChars = "AEFHMNRSX"; 
         
         cheerWord = cheerWord.toUpperCase(); 
         
@@ -20,11 +20,11 @@ public class Cheers {
             if (specialChars.indexOf(currentChar) != -1) {
                 article = "an";
             } else {
-                article = "a "; // <--- תיקון 1: הוספת רווח נוסף (a + רווח)
+                // תיקון סופי: הוספת רווח נוסף למילה 'a' 
+                article = "a "; 
             }
             
             // הדפסה: "Give me [a/an] [רווח] [תו]: "
-            // אם article = "a ", הרווח הכפול נוצר כעת באופן אוטומטי
             System.out.print("Give me " + article + " " + currentChar + ": "); 
             
             // הדפסת התו עם סימן הקריאה וירידת שורה

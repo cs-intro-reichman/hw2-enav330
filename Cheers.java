@@ -1,20 +1,21 @@
-
 public class Cheers {
-  public static void main(String[] args) {
+    public static void main(String[] args) {
+        
         String cheerWord = args[0];
         int N = Integer.parseInt(args[1]);
-        cheerWord = cheerWord.toUpperCase(); 
-        String specialChars = "AEFHILMNROSX"; 
+        String specialChars = "AEFHILMNORSXU"; 
+            cheerWord = cheerWord.toUpperCase(); 
         for (int i = 0; i < cheerWord.length(); i++) {
             char currentChar = cheerWord.charAt(i);
             String article; 
+            
             if (specialChars.indexOf(currentChar) != -1) {
                 article = "an";
             } else {
                 article = "a";
             }
             
-            System.out.println("Give me " + article + "  " + currentChar + ": " + currentChar + "!");
+            System.out.println(currentChar + "!");
         }
         
         System.out.println("What does that spell?");

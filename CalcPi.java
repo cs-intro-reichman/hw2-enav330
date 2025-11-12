@@ -10,7 +10,7 @@ public class CalcPi {
 		num = num + 2;
 		sign = sign *(-1);
 	 }
-	 System.out.println("pi acocording to java: " + Math.PI);
-	 System.out.println("pi, approximated:     " + piapprox * 4);
+	 System.out.println("pi acocording to Java: " + Math.PI);
+	 System.out.println("pi, approximated:      " + piapprox * 4);
 	}
 }
